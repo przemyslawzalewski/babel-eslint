@@ -1,4 +1,13 @@
-# babel-eslint [![npm](https://img.shields.io/npm/v/babel-eslint.svg)](https://www.npmjs.com/package/babel-eslint) [![travis](https://img.shields.io/travis/babel/babel-eslint/master.svg)](https://travis-ci.org/babel/babel-eslint) [![npm-downloads](https://img.shields.io/npm/dm/babel-eslint.svg)](https://www.npmjs.com/package/babel-eslint)
+# This is a fork of [babel-eslint](https://github.com/babel/babel-eslint) that comes with compatibility fixes for [eslint^6.2.0](https://github.com/eslint/eslint/releases/tag/v6.2.0)
+
+- Pull request - [Fix ESLint 6.2.0 + babel-eslint + no-unused-vars false positive with for-in loop](https://github.com/babel/babel-eslint/pull/792)
+
+Related issues:
+
+- https://github.com/babel/babel-eslint/issues/791
+- https://github.com/eslint/eslint/issues/12117
+
+# babel-eslint [![npm](https://img.shields.io/npm/v/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint) [![npm-downloads](https://img.shields.io/npm/dm/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint)
 
 **babel-eslint** allows you to lint **ALL** valid Babel code with the fantastic
 [ESLint](https://github.com/eslint/eslint).
@@ -18,15 +27,19 @@ For questions and support please visit the [`#discussion`](https://babeljs.slack
 ## Known Issues
 
 Flow:
+
 > Check out [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype): An `eslint` plugin that makes flow type annotations global variables and marks declarations as used. Solves the problem of false positives with `no-undef` and `no-unused-vars`.
+
 - `no-undef` for global flow types: `ReactElement`, `ReactClass` [#130](https://github.com/babel/babel-eslint/issues/130#issuecomment-111215076)
   - Workaround: define types as globals in `.eslintrc` or define types and import them `import type ReactElement from './types'`
 - `no-unused-vars/no-undef` with Flow declarations (`declare module A {}`) [#132](https://github.com/babel/babel-eslint/issues/132#issuecomment-112815926)
 
 Modules/strict mode
+
 - `no-unused-vars: [2, {vars: local}]` [#136](https://github.com/babel/babel-eslint/issues/136)
 
 Please check out [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for React/JSX issues
+
 - `no-unused-vars` with jsx
 
 Please check out [eslint-plugin-babel](https://github.com/babel/eslint-plugin-babel) for other issues
@@ -45,21 +58,21 @@ It just needs to export a `parse` method that takes in a string of code and outp
 
 ### Supported ESLint versions
 
-ESLint | babel-eslint
------------- | -------------
-4.x | >= 6.x
-3.x | >= 6.x
-2.x | >= 6.x
-1.x | >= 5.x
+| ESLint | babel-eslint |
+| ------ | ------------ |
+| 4.x    | >= 6.x       |
+| 3.x    | >= 6.x       |
+| 2.x    | >= 6.x       |
+| 1.x    | >= 5.x       |
 
 ### Install
 
 Ensure that you have substituted the correct version lock for `eslint` and `babel-eslint` into this command:
 
 ```sh
-$ npm install eslint@4.x babel-eslint@8 --save-dev
+$ npm install eslint @przemyslawzalewski/babel-eslint@10 --save-dev
 # or
-$ yarn add eslint@4.x babel-eslint@8 -D
+$ yarn add eslint @przemyslawzalewski/babel-eslint@10 -D
 ```
 
 ### Setup
@@ -68,7 +81,7 @@ $ yarn add eslint@4.x babel-eslint@8 -D
 
 ```json
 {
-  "parser": "babel-eslint",
+  "parser": "@przemyslawzalewski/babel-eslint",
   "rules": {
     "strict": 0
   }
@@ -87,7 +100,7 @@ Check out the [ESLint docs](http://eslint.org/docs/rules/) for all possible rule
 
 ```json
 {
-  "parser": "babel-eslint",
+  "parser": "@przemyslawzalewski/babel-eslint",
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": false,
