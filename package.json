@@ -67,7 +67,12 @@
   },
   "lint-staged": {
     "*.js": [
+      "prettier --write",
       "eslint --format=codeframe --fix",
+      "git add"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write",
       "git add"
     ]
   },
