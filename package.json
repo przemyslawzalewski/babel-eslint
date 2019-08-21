@@ -14,7 +14,7 @@
   "homepage": "https://github.com/babel/babel-eslint",
   "scripts": {
     "test": "npm run lint && npm run test-only",
-    "test-only": "cd test && mocha specs && cd -",
+    "test-only": "cd test && mocha specs",
     "lint": "eslint .",
     "lint-fix": "npm run lint -- --fix",
     "prettier": "prettier \"**/*.{js,json,md,yml}\" --check",
