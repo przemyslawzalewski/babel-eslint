@@ -1,11 +1,13 @@
-# babel-eslint [![npm](https://img.shields.io/npm/v/babel-eslint.svg)](https://www.npmjs.com/package/babel-eslint) [![travis](https://img.shields.io/travis/babel/babel-eslint/master.svg)](https://travis-ci.org/babel/babel-eslint) [![npm-downloads](https://img.shields.io/npm/dm/babel-eslint.svg)](https://www.npmjs.com/package/babel-eslint)
+# This is a fork of [babel-eslint](https://github.com/babel/babel-eslint) that comes with compatibility fixes for [eslint^6.2.0](https://github.com/eslint/eslint/releases/tag/v6.2.0)
+
+# babel-eslint [![npm](https://img.shields.io/npm/v/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint) [![npm-downloads](https://img.shields.io/npm/dm/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint)
 
 **babel-eslint** allows you to lint **ALL** valid Babel code with the fantastic
 [ESLint](https://github.com/eslint/eslint).
 
-## Breaking change in v11.x.x
+## Breaking change in v11
 
-As of the v11.x.x release, babel-eslint now requires Babel as a peer dependency and expects a valid [Babel configuration file](https://babeljs.io/docs/en/configuration) to exist. This ensures that the same Babel configuration is used during both linting and compilation.
+As of the v11 release, babel-eslint now requires Babel as a peer dependency and expects a valid [Babel configuration file](https://babeljs.io/docs/en/configuration) to exist. This ensures that the same Babel configuration is used during both linting and compilation.
 
 ## When should I use babel-eslint?
 
@@ -41,7 +43,7 @@ To use babel-eslint, `"babel-eslint"` must be specified as the `parser` in your 
 
 ```js
 module.exports = {
-  parser: "babel-eslint",
+  parser: "@przemyslawzalewski/babel-eslint",
 };
 ```
 
@@ -63,7 +65,7 @@ Additional configuration options can be set in your ESLint configuration under t
 
 ```js
 module.exports = {
-  parser: "babel-eslint",
+  parser: "@przemyslawzalewski/babel-eslint",
   parserOptions: {
     sourceType: "module",
     allowImportExportEverywhere: false,
@@ -89,7 +91,7 @@ module.exports = {
   overrides: [
     {
       files: ["files/transformed/by/babel/*.js"],
-      parser: "babel-eslint",
+      parser: "@przemyslawzalewski/babel-eslint",
     },
   ],
 };
