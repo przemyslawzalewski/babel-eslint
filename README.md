@@ -35,16 +35,16 @@ columns is also retained so you can track down errors with ease.
 ### Installation
 
 ```sh
-$ npm install eslint babel-eslint --save-dev
+$ npm install eslint @przemyslawzalewski/babel-eslint --save-dev
 # or
-$ yarn add eslint babel-eslint -D
+$ yarn add eslint @przemyslawzalewski/babel-eslint -D
 ```
 
 **Note:** babel-eslint requires `babel/core@>=7.2.0` and a valid Babel configuration file to run. If you do not have this already set up, please see the [Babel Usage Guide](https://babeljs.io/docs/en/usage).
 
 ### Setup
 
-To use babel-eslint, `"babel-eslint"` must be specified as the `parser` in your ESLint configuration file (see [here](https://eslint.org/docs/user-guide/configuring#specifying-parser) for more detailed information).
+To use babel-eslint, `"@przemyslawzalewski/babel-eslint"` must be specified as the `parser` in your ESLint configuration file (see [here](https://eslint.org/docs/user-guide/configuring#specifying-parser) for more detailed information).
 
 **.eslintrc.js**
 
