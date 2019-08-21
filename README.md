@@ -1,5 +1,12 @@
 # This is a fork of [babel-eslint](https://github.com/babel/babel-eslint) that comes with compatibility fixes for [eslint^6.2.0](https://github.com/eslint/eslint/releases/tag/v6.2.0)
 
+- Pull request - [Fix ESLint 6.2.0 + babel-eslint + no-unused-vars false positive with for-in loop](https://github.com/babel/babel-eslint/pull/792)
+
+Related issues:
+
+- https://github.com/babel/babel-eslint/issues/791
+- https://github.com/eslint/eslint/issues/12117
+
 # babel-eslint [![npm](https://img.shields.io/npm/v/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint) [![npm-downloads](https://img.shields.io/npm/dm/@przemyslawzalewski/babel-eslint.svg)](https://www.npmjs.com/package/@przemyslawzalewski/babel-eslint)
 
 **babel-eslint** allows you to lint **ALL** valid Babel code with the fantastic
